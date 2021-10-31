@@ -3,7 +3,7 @@
 
 ## Table of contents
 - [Task](#task)
-- [How to run]((#how-to-run))
+- [How to run](#how-to-run)
 
 ## Task
 Your task is to create a simple Spring Boot service, that is able to calculate any possible land
