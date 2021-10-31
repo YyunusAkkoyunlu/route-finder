@@ -16,7 +16,6 @@ public class BeanConfiguration {
 
     @Bean
     RestTemplate restTemplate() {
-
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setMessageConverters(httpMessageConverter());
 

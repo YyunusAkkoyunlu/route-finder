@@ -1,19 +1,13 @@
 package com.project.pwc.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Country {
 
-    String cca3;
+    private String cca3;
 
-    List<String> borders;
-
-    List<Country> borderGraphList;
-
-
-    public void addEdge(Country to) {
-        borderGraphList.add(to);
-    }
+    private List<String> borders;
 
 
     public String getCca3() {
@@ -30,6 +24,20 @@ public class Country {
 
     public void setBorders(List<String> borders) {
         this.borders = borders;
+    }
+
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Country)) {
+            return false;
+        }
+
+        final Country country = (Country) o;
+        return Objects.equals(getCca3(), country.getCca3());
     }
 
 }

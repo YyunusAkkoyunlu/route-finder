@@ -6,4 +6,5 @@ public class RouteNotFoundException extends RuntimeException {
 
         super(message);
     }
+
 }

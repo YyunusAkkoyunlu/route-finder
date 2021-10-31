@@ -15,14 +15,9 @@ import java.util.stream.Collectors;
 @Service
 public class RouteService {
 
-    /*private final RestTemplate restTemplate;
-
-    public RouteService(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }*/
-
     @Autowired
     RestTemplate restTemplate;
+
 
     public static Map<String, Country> mapCountry = new HashMap<>();
 
@@ -31,7 +26,6 @@ public class RouteService {
 
 
     public Route route(String origin, String destination) {
-
         if (mapCountry == null || mapCountry.isEmpty()) {
             mapCountry = getRoutingWithDestination();
         }
@@ -61,7 +55,6 @@ public class RouteService {
     }
 
     public Map<String, Country> getRoutingWithDestination() {
-
         List<Country> countries = Arrays.asList(restTemplate.getForObject(countryURL, Country[].class));
 
         return countries.stream()

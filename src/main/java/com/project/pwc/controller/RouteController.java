@@ -16,13 +16,12 @@ public class RouteController {
     @Autowired
     private RouteService routeService;
 
+
     @GetMapping("/{origin}/{destination}")
     public ResponseEntity<Route> getRouteFromDestinations(@PathVariable("origin") String origin, @PathVariable("destination") String destination) {
         Route route = routeService.route(origin, destination);
 
         return ResponseEntity.ok(route);
-
-        // todo: http 400, ve getRoutingWithDestinationV2 methodunda kullanılan message converter kısmının configteki bean içine alınması
     }
 
 }

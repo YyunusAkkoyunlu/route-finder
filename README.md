@@ -37,9 +37,12 @@ _________
 
 The only prerequisite is Java 11.
 
+ - Clone project:
+   - on terminal: `git clone https://github.com/YyunusAkkoyunlu/route-finder.git && cd route-finder`
+   
  - Build the application:
    - on terminal: `mvn clean package`
-   
+      
  - Run the application:
    - on terminal: `java -jar target/pwcroute.jar`
 
